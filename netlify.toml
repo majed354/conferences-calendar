@@ -1,0 +1,23 @@
+# إعدادات Netlify للموقع
+[build]
+  publish = "."
+  
+# إعدادات الأمان والأداء
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+# Cache للملفات الثابتة
+[[headers]]
+  for = "/conferences.csv"
+  [headers.values]
+    Cache-Control = "public, max-age=300"
+    
+# إعادة توجيه 404 إلى الصفحة الرئيسية
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
