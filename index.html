@@ -44,6 +44,16 @@
     }
   </style>
 </head>
+<!-- شريط الترشيح حسب النوع -->
+<section dir="rtl" style="margin: 1rem 0; display:flex; gap:.5rem; align-items:center; justify-content:flex-end;">
+  <label for="typeFilter"><strong>العرض:</strong></label>
+  <select id="typeFilter" style="padding:.4rem .6rem; border-radius:.5rem;">
+    <option value="all">الجميع</option>
+    <option value="conference">المؤتمرات</option>
+    <option value="workshop">الدورات</option>
+  </select>
+</section>
+
 <body class="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 relative overflow-x-hidden">
   <!-- نقاط ديكورية -->
   <div class="fixed top-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
