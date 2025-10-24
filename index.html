@@ -315,7 +315,13 @@
       }, []);
 
       // أيقونات lucide بعد كل تحديث
-      useEffect(() => { if (window.lucide?.createIcons) lucide.createIcons(); });
+     // الجديد (متوافق مع الإصدارات الأخيرة)
+useEffect(() => {
+  if (window.lucide?.createIcons && window.lucide?.icons) {
+    window.lucide.createIcons({ icons: window.lucide.icons });
+  }
+});
+
 
       // أقرب مؤتمر (للبطاقة)
       useEffect(() => {
